@@ -1,0 +1,129 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: $box-shadow;
+  background: $white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 9%;
+
+  .logo {
+    font-size: 2.5rem;
+    color: $black;
+    font-weight: bolder;
+
+    i {
+      color: $red;
+    }
+  }
+
+  .navbar a {
+    margin: 0 1.5rem;
+    font-size: 1.7rem;
+    color: $black;
+
+    &:hover {
+      color: $red;
+    }
+  }
+
+  .icons div,
+  .icons a {
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: 0.5rem;
+    background: $light-bg;
+    font-size: 1.7rem;
+    color: $black;
+    margin-left: 0.3rem;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      background: $red;
+      color: $white;
+    }
+  }
+
+  #menu-btn {
+    display: none;
+  }
+
+  .search-form {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    height: 6rem;
+    background: $white;
+    border-top: $border;
+    border-bottom: $border;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+    &.active {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    input {
+      width: 100%;
+      font-size: 1.6rem;
+      color: $light-color;
+      text-transform: none;
+    }
+
+    label {
+      font-size: 2.5rem;
+      margin-left: 2rem;
+      color: $black;
+      cursor: pointer;
+
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .header {
+    padding: 1.5rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    #menu-btn {
+      display: inline-block;
+    }
+
+    .navbar {
+      position: absolute;
+      top: 99%;
+      left: 0;
+      right: 0;
+      background: $white;
+      border-top: $border;
+      border-bottom: $border;
+      padding: 0 2rem;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+      &.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+
+      a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 1rem;
+      }
+    }
+  }
+}
