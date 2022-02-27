@@ -1,0 +1,64 @@
+.about {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  .image {
+    flex: 1 1 42rem;
+    padding-bottom: 5rem;
+    padding-right: 5rem;
+
+    img {
+      width: 100%;
+      box-shadow: 4rem 4rem 0 $light-bg;
+    }
+  }
+
+  .content {
+    flex: 1 1 42rem;
+
+    .box {
+      padding: 3rem;
+      background: $light-bg;
+
+      h3 {
+        font-size: 2.5rem;
+        color: $black;
+      }
+
+      p {
+        padding: 1rem 0;
+        line-height: 2;
+        color: $light-color;
+        font-size: 1.4rem;
+      }
+    }
+
+    .icons-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      gap: 2rem;
+      margin-top: 2rem;
+
+      .icons {
+        flex: 1 1 16rem;
+        background: $light-bg;
+        padding: 2rem;
+        text-align: center;
+
+        i {
+          color: $red;
+          margin-bottom: 1rem;
+          font-size: 5rem;
+        }
+
+        p {
+          font-size: 1.4rem;
+          color: $light-color;
+        }
+      }
+    }
+  }
+}
