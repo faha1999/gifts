@@ -66,3 +66,12 @@ function scrollActive() {
   });
 }
 window.addEventListener('scroll', scrollActive);
+
+// Header shadow add
+
+function scrollHeader() {
+  const nav = document.getElementById('header');
+  if (this.scrollY >= 120) nav.classList.add('active-header');
+  else nav.classList.remove('active-header');
+}
+window.addEventListener('scroll', scrollHeader);
