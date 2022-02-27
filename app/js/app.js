@@ -42,3 +42,27 @@ function prev() {
   index = (index - 1 + slides.length) % slides.length;
   slides[index].classList.add('active');
 }
+
+// Scroll active
+const sections = document.querySelectorAll('section[id]');
+
+function scrollActive() {
+  const scrollY = window.pageYOffset;
+
+  sections.forEach((current) => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 50;
+    sectionId = current.getAttribute('id');
+
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document
+        .querySelector('.navbar a[href*=' + sectionId + ']')
+        .classList.add('active');
+    } else {
+      document
+        .querySelector('.navbar a[href*=' + sectionId + ']')
+        .classList.remove('active');
+    }
+  });
+}
+window.addEventListener('scroll', scrollActive);
