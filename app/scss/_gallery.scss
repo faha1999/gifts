@@ -1,0 +1,57 @@
+.gallery {
+  .box-container {
+    @include grid(31rem);
+
+    .box {
+      height: 25rem;
+      overflow: hidden;
+      position: relative;
+      box-shadow: $box-shadow;
+
+      &:hover .content {
+        display: flex;
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .content {
+        background: rgba(255, 255, 255, 0.8);
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        padding: 2rem;
+        text-align: center;
+        border: $border;
+        display: none;
+
+        h3 {
+          font-size: 2rem;
+          color: $black;
+          animation: fadeIn 0.2s linear backwards;
+        }
+
+        p {
+          font-size: 1.4rem;
+          color: $black;
+          padding: 1rem 0;
+          line-height: 2;
+          animation: fadeIn 0.2s linear backwards 0.4s;
+        }
+
+        .btn {
+          animation: fadeIn 0.2s linear backwards 0.6s;
+        }
+      }
+    }
+  }
+}
