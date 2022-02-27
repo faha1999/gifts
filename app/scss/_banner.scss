@@ -1,0 +1,32 @@
+.banner {
+  background: url(../images/banner-bg.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  .content {
+    max-width: 40rem;
+    background: $white;
+    box-shadow: $box-shadow;
+    padding: 2rem;
+    text-align: center;
+    margin: 10rem 0;
+
+    span {
+      font-size: 2rem;
+      color: $red;
+    }
+
+    h3 {
+      font-size: 3rem;
+      color: $black;
+      padding-top: 0.5rem;
+    }
+
+    p {
+      font-size: 1.4rem;
+      color: $light-color;
+      padding: 1rem 0;
+      line-height: 2;
+    }
+  }
+}
