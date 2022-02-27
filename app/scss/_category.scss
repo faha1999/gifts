@@ -1,0 +1,24 @@
+.category {
+  .box-container {
+    @include grid(16rem);
+
+    .box {
+      text-align: center;
+
+      &:hover h3 {
+        color: $red;
+      }
+
+      img {
+        height: 14rem;
+        margin-bottom: 1rem;
+      }
+
+      h3 {
+        font-size: 1.7rem;
+        color: $black;
+        font-weight: normal;
+      }
+    }
+  }
+}
