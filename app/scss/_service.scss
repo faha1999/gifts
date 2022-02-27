@@ -1,0 +1,25 @@
+.service {
+  @include grid(31rem);
+  background: $red;
+
+  .box {
+    text-align: center;
+    padding: 2rem;
+
+    img {
+      height: 10rem;
+    }
+
+    h3 {
+      padding: 1rem 0;
+      font-size: 2rem;
+      color: $white;
+    }
+
+    p {
+      line-height: 2;
+      font-size: 1.4rem;
+      color: $white;
+    }
+  }
+}
